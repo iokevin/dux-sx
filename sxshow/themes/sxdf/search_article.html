@@ -1,0 +1,95 @@
+<!--#include file="head.html"-->
+	</div><div class="h-serh-rest clearfix">
+		
+	
+	<!--sidebar begin-->
+	
+	<div class="know-cls" id="zbj-know-cls">
+			<h3 class="cls-tit">分类导航</h3>
+			<ul class="one-cls">
+			
+				<!--list:{$model="MenuList" $parentId="0"  $limit="20"}-->
+				<li class="one-cls-item">
+													<p><em class="ico"></em><a href="{$list.url}">{$list.name}</a></p>
+							
+				
+							
+						
+				</li>
+				<!--{/list}-->		
+							<li class="one-cls-item">
+					
+				</li>
+							<li class="one-cls-item">
+					
+				</li>
+							
+			</ul>
+		</div>
+		
+		
+		<div class="h-serh-right">
+						<div class="h-search">			
+					<p class="tit">有问题来我这里</p>
+    <div class="kwords clearfix">
+    <form action="{$url|'index/index'}" method="get" class="zbj-searform">
+    <input name="r" type="hidden" value="article/Search/index" />
+    <input name="model" type="hidden" value="1" />
+        <div class="kwords clearfix">
+            <p class="wos"><input name="keyword" type="text" 
+            value="" 
+            class="text zbj-helptxt" /></p>
+            <p class="fl"><input name="" type="submit" class="butn zbj-helpbtn" value=" "/></p>
+            <ul class="kwords-list zbj-textlist">
+            </ul>
+        </div>
+    </form>
+    </div>
+	  <!--  <p class="hotws">
+        <span>热门搜索：</span>
+                <a href="">代发货</a>
+                <a href="">代发货</a>
+                <a href="">代发货</a>
+                <a href="">代发货</a>
+                <a href="">代发货</a>
+            </p>-->
+					
+			</div>	
+				
+	
+<!--	sidebar end-->
+	
+	
+	
+				
+            		
+                <div class="h-serh-tit clearfix"><h3><!--{loop="$crumb $vo"}-->{$vo.name} 的结果：<!--{/loop}--></h3></div>
+                
+                <div class="serh-box">
+                    <ul>
+                    <!--{loop="$pageList $vo"}-->
+                                                    <li>
+                                <p class="item-tit"><a href="{$vo.aurl}" target="_blank">{$vo.title}</a></p>
+                                <p class="item-desc">{$vo.description}</p>
+                                <p class="item-number">时间：{$vo.time|format_time:'Y-m-d'}</p>
+                            </li>
+                            
+                            <!--{/loop}-->
+                                          
+                        
+                    </ul>
+                                    </div>
+                <div class="clearfix">
+                                            <div class="list-page">
+				{$page} 
+	</div>
+                                    </div>
+            		
+		</div>
+	</div>
+</div>
+    
+<!--#include file="foot.html"-->
+<!-- WPA Button Begin -->
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODAyMTkxN18xMTkzMTBfNDAwMDg4NjQ0M18"></script>
+<!-- WPA Button End -->

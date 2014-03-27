@@ -1,0 +1,68 @@
+<!--#include file="head.html"-->
+	</div><div class="h-serh-rest clearfix">
+		<!--#include file="sidebar.html"-->
+		<div class="h-serh-right">
+						<div class="h-search">			
+					<p class="tit">有问题来我这里</p>
+    <div class="kwords clearfix">
+    <form action="{$url|'index/index'}" method="get" class="zbj-searform">
+    <input name="r" type="hidden" value="article/Search/index" />
+    <input name="model" type="hidden" value="1" />
+        <div class="kwords clearfix">
+            <p class="wos"><input name="keyword" type="text" 
+            value="" 
+            class="text zbj-helptxt" /></p>
+            <p class="fl"><input name="" type="submit" class="butn zbj-helpbtn" value=" "/></p>
+            <ul class="kwords-list zbj-textlist">
+            </ul>
+        </div>
+    </form>
+    </div>
+	    <p class="hotws">
+        <span>热门搜索：</span>
+                <a href="">发布需求</a>
+                <a href="">认证</a>
+                <a href="">提现</a>
+                <a href="">充值</a>
+                <a href="">美元支付</a>
+            </p>
+					
+			</div>	
+				
+				
+			<div class="location-link mt10">
+				<span>您当前的位置：</span><a href='__ROOT__/'>首页</a>
+				<!--{loop="$crumb $vo"}-->
+				<em>></em><span><a href="{$vo.url}">{$vo.name}</a></span>
+				<!--{/loop}-->
+			</div>
+			<div class="serh-box">
+				<h3 class="prob-item-tit">{$vo.name}</h3>
+								<p class="prob-item-class">
+								</p>
+								<ul class="prob-item-list">
+								  <!--{loop="$pageList $vo"}-->
+                                                    <li>
+                                <p class="item-tit"><a href="{$vo.aurl}" target="_blank">{$vo.title}</a></p>
+                                <p class="item-desc">{$vo.description}</p>
+                                <p class="item-number">时间：{$vo.time|format_time:'Y-m-d'}</p>
+                            </li>
+                            
+                            <!--{/loop}-->
+							
+														
+							
+								</ul>
+				<div class="clearfix">
+							<div class="list-page">
+			{$page}
+			</div>
+					</div>
+			</div>	
+					
+		</div>
+				</div>
+
+</div>
+    
+<!--#include file="foot.html"-->

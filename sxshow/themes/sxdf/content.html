@@ -1,0 +1,47 @@
+<!--#include file="head.html"-->
+	</div>	<div class="h-serh-rest clearfix">
+				<!--#include file="sidebar.html"-->
+
+				
+            	
+			<div class="location-link mt10">
+				<span>您当前的位置：</span><a href='__ROOT__/'>首页</a>
+				<!--{loop="$crumb $vo"}-->
+				<em>></em><span><a href='{$vo.url}'>{$vo.name}</a></span>
+				<!--{/loop}-->
+				
+			</div>
+                        			<div class="serh-box prob-box">
+				<div class="prob-tit">
+					<h4>{$contentInfo.title}</h4>
+					<span>最后更新时间：{$contentInfo.time|format_time:'Y-m-d H:i:s'}</span>
+				</div>
+				<div class="prob-con">
+					{$contentInfo.content}
+				</div>				
+								<div class="issues-prob">
+					<!--<p class="issues-tit">&nbsp;&nbsp;相关文章<br></p>-->
+					<ul class="clearfix">
+											<li><b>上一篇</b>：<a href="{$prevInfo.aurl}" >{$prevInfo.title}</a></li>
+											
+											<li><b>下一篇</b>：<a href="{$nextInfo.aurl}">{$nextInfo.title}</a></li>
+											
+										</ul>
+				</div>
+								
+			</div>
+								
+			            		</div>
+		
+	</div>
+	
+</div>
+
+<style>
+.lim_float_icon{display:none}
+</style>
+    
+<!--#include file="foot.html"-->
+<!-- WPA Button Begin -->
+<script charset="utf-8" type="text/javascript" src="http://wpa.b.qq.com/cgi/wpa.php?key=XzkzODAyMTkxN18xMTkzMTBfNDAwMDg4NjQ0M18"></script>
+<!-- WPA Button End -->
